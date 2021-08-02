@@ -7,10 +7,29 @@
 
 import SwiftUI
 
+class CoursesViewModel: ObservableObject {
+    @Published var messages = "Message inside observable object"
+}
+
+
 struct ContentView: View {
+    
+    @ObservedObject var coursesVM = CoursesViewModel()
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ScrollView {
+                Text(coursesVM.messages)
+            }.navigationBarTitle("Courses")
+            .navigationBarItems(trailing: Button(action: {
+                print("Fetching json data")
+                
+                self.coursesVM.messages = "SOMETHING ELSE"
+            }, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            }))
+        }
     }
 }
 
