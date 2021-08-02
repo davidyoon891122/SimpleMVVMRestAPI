@@ -30,6 +30,31 @@ class CoursesViewModel: ObservableObject {
     
     func fetchCourses() {
         // fetch json and decode and update some array property
+        
+        guard let url = URL(string: "URL") else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard error == nil else {
+                print(String(describing: error!))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                return
+            }
+            
+            guard let data = data else {
+                print("data Error ")
+                return
+            }
+            do {
+                self.courses = try JSONDecoder().decode([Course].self, from: data)
+            } catch let error {
+                print(String(describing: error))
+            }
+            
+        }.resume()
     }
 }
 
@@ -56,7 +81,7 @@ struct ContentView: View {
             .navigationBarItems(trailing: Button(action: {
                 print("Fetching json data")
                 
-                self.coursesVM.changeMesssage()
+                self.coursesVM.fetchCourses()
             }, label: {
                 /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
             }))
