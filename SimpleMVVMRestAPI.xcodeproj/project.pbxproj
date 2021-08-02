@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD18300626B8AFBB003D7A53 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18300526B8AFBB003D7A53 /* UserModel.swift */; };
 		AD32304C26B8365E0057BCB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304B26B8365E0057BCB1 /* AppDelegate.swift */; };
 		AD32304E26B8365E0057BCB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */; };
 		AD32305026B8365E0057BCB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304F26B8365E0057BCB1 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD18300526B8AFBB003D7A53 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AD32304826B8365E0057BCB1 /* SimpleMVVMRestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVMRestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD32304B26B8365E0057BCB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD18300426B8AFA9003D7A53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD18300526B8AFBB003D7A53 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD18300726B8B04B003D7A53 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		AD32303F26B8365E0057BCB1 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +73,8 @@
 		AD32304A26B8365E0057BCB1 /* SimpleMVVMRestAPI */ = {
 			isa = PBXGroup;
 			children = (
+				AD18300726B8B04B003D7A53 /* ViewModels */,
+				AD18300426B8AFA9003D7A53 /* Models */,
 				AD32304B26B8365E0057BCB1 /* AppDelegate.swift */,
 				AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */,
 				AD32304F26B8365E0057BCB1 /* ContentView.swift */,
@@ -147,6 +166,7 @@
 			files = (
 				AD32304C26B8365E0057BCB1 /* AppDelegate.swift in Sources */,
 				AD32304E26B8365E0057BCB1 /* SceneDelegate.swift in Sources */,
+				AD18300626B8AFBB003D7A53 /* UserModel.swift in Sources */,
 				AD32305026B8365E0057BCB1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

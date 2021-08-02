@@ -14,7 +14,6 @@ struct Course:Identifiable, Decodable {
 }
 
 
-
 class CoursesViewModel: ObservableObject {
     @Published var messages = "Message inside observable object"
     
