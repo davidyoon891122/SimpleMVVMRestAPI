@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD18300626B8AFBB003D7A53 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD18300526B8AFBB003D7A53 /* UserModel.swift */; };
+		AD263A3926B8E8040082C368 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD263A3826B8E8040082C368 /* UsersViewModel.swift */; };
 		AD32304C26B8365E0057BCB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304B26B8365E0057BCB1 /* AppDelegate.swift */; };
 		AD32304E26B8365E0057BCB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */; };
 		AD32305026B8365E0057BCB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD32304F26B8365E0057BCB1 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		AD18300526B8AFBB003D7A53 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		AD263A3826B8E8040082C368 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		AD32304826B8365E0057BCB1 /* SimpleMVVMRestAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMVVMRestAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD32304B26B8365E0057BCB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +49,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AD18300726B8B04B003D7A53 /* ViewModels */ = {
+		AD263A3626B8E7BC0082C368 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD32304B26B8365E0057BCB1 /* AppDelegate.swift */,
+				AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AD263A3726B8E7F20082C368 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AD263A3826B8E8040082C368 /* UsersViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -73,10 +85,9 @@
 		AD32304A26B8365E0057BCB1 /* SimpleMVVMRestAPI */ = {
 			isa = PBXGroup;
 			children = (
-				AD18300726B8B04B003D7A53 /* ViewModels */,
+				AD263A3726B8E7F20082C368 /* ViewModels */,
+				AD263A3626B8E7BC0082C368 /* Resources */,
 				AD18300426B8AFA9003D7A53 /* Models */,
-				AD32304B26B8365E0057BCB1 /* AppDelegate.swift */,
-				AD32304D26B8365E0057BCB1 /* SceneDelegate.swift */,
 				AD32304F26B8365E0057BCB1 /* ContentView.swift */,
 				AD32305126B8365E0057BCB1 /* Assets.xcassets */,
 				AD32305626B8365E0057BCB1 /* LaunchScreen.storyboard */,
@@ -168,6 +179,7 @@
 				AD32304E26B8365E0057BCB1 /* SceneDelegate.swift in Sources */,
 				AD18300626B8AFBB003D7A53 /* UserModel.swift in Sources */,
 				AD32305026B8365E0057BCB1 /* ContentView.swift in Sources */,
+				AD263A3926B8E8040082C368 /* UsersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

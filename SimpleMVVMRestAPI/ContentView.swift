@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+// Model
 struct Course:Identifiable, Decodable {
     let id = UUID()
     let name: String
@@ -22,6 +22,8 @@ class CoursesViewModel: ObservableObject {
         .init(name: "TEST_2"),
         .init(name: "TEST_3")
     ]
+    
+    
     func changeMesssage() {
         self.messages = "BLAH BLAH BLAH"
     }
@@ -64,23 +66,26 @@ class CoursesViewModel: ObservableObject {
 struct ContentView: View {
     
     @ObservedObject var coursesVM = CoursesViewModel()
-    
+    @ObservedObject var usersVM = UsersViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                Text(coursesVM.messages)
+                Text(usersVM.usersMessage)
                 
-                ForEach(coursesVM.courses) { course in
-                    Text(course.name)
+                ForEach(usersVM.users) { user in
+                    Text(user.EMAIL)
+                    Text(user.NAME)
+                    Text(user.PW)
+                    Text(user.PROFILE)
+                    
                 }
-                
-                
             }.navigationBarTitle("Courses")
             .navigationBarItems(trailing: Button(action: {
                 print("Fetching json data")
+                //self.coursesVM.fetchCourses()
+                self.usersVM.fetchUsers()
                 
-                self.coursesVM.fetchCourses()
             }, label: {
                 /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
             }))

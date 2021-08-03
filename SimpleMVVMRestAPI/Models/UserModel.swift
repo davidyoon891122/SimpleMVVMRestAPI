@@ -8,11 +8,24 @@
 import Foundation
 
 
-struct  User: Identifiable, Decodable {
+struct User: Codable, Identifiable {
     let id = UUID()
-    let userID: Int
-    let userEmail: String
-    let userName: String
-    let userPassword: String
-    let userProFile: String
+    let USER_ID: Int
+    let EMAIL: String
+    let NAME: String
+    let PW: String
+    let PROFILE: String
+    
+    
+    init(id: Int, email: String, name: String, pw: String, profile: String) {
+        USER_ID = id
+        EMAIL = email
+        NAME = name
+        PW = pw
+        PROFILE = profile
+    }
+    
 }
+
+
+
